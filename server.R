@@ -38,7 +38,7 @@ propAc=getProportions(weight,1,'PROP_AC_')
 proportions=cbind(propAc,propIn)
 msoaShape@data=cbind(msoaShape@data,proportions)
 
-msoaLookup<-read.csv('msoa_lookup.csv',header=T, stringsAsFactors = F)
+msoaLookup<-read.csv('Data/msoa_lookup.csv',header=T, stringsAsFactors = F)
 colnames(msoaLookup)[7]='RGN16CD'#i'm sorry,but I didnt want to download another lookup
 colnames(msoaLookup)[8]='RGN16NM'
 
