@@ -77,7 +77,7 @@ server <- function(input, output, session) {
     topicProds=topicInput()
     getTopicPlot(topicProds)})
   
-  output$within_map <- renderLeaflet({
+   output$across_map <- renderLeaflet({
     selVar=paste0('PROP_IN_',input$TOPIC)
     if(input$AREA==1){datashape=regionShape; areaCode='RGN16NM'}
     if(input$AREA==2){datashape=laShape; areaCode='LAD17NM'}
@@ -87,7 +87,8 @@ server <- function(input, output, session) {
       setView(lng = -1.5, 53, zoom = 6) 
   })
   
-  output$across_map <- renderLeaflet({
+
+  output$within_map <- renderLeaflet({
     selVar=paste0('PROP_AC_',input$TOPIC)
     if(input$AREA==1){datashape=regionShape; areaCode='RGN16NM'}
     if(input$AREA==2){datashape=laShape; areaCode='LAD17NM'}
@@ -96,6 +97,7 @@ server <- function(input, output, session) {
     tmap_leaflet(msoa_map) %>% 
       setView(lng = -1.5, 53, zoom = 6) 
   })
+
   
 }
 
