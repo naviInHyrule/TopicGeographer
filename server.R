@@ -33,8 +33,8 @@ colnames(msoaShape@data)=toupper(colnames(msoaShape@data))
 
 msoaShapeDist=msoaShape@data
 weight=msoaShapeDist[,grepl('TOPIC', colnames(msoaShapeDist))]
-propIn=getProportions(weight,2,'PROP_IN_')
-propAc=getProportions(weight,1,'PROP_AC_')
+propIn=getProportions(weight,1,'PROP_IN_')
+propAc=getProportions(weight,2,'PROP_AC_')
 proportions=cbind(propAc,propIn)
 msoaShape@data=cbind(msoaShape@data,proportions)
 
