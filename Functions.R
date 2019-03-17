@@ -20,7 +20,7 @@ mergeLists=function(x,y,dimname){
 getMap=function(areaShape,selVar,type,areaCode){
 if(type==1){palette='Reds';title='Topic Weight'}
 if(type==2){palette='-RdBu';title='Proportions within Area' }
-if(type==3){palette='-RdBu';title='Proportions across Topics'}
+if(type==3){palette='-RdBu';title='Proportions across Areas'}
   
 msoa_map=  tm_shape(areaShape)  + tm_borders(alpha=0.3)+
   tm_fill(selVar, palette = 'Reds', style = "pretty", title=title,
