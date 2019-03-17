@@ -1,7 +1,7 @@
 
 getProportions=function(df,col,lab){
   colmean=apply(df,col,mean)#by areas
-  prop=round(df/colmean-1,2)
+  prop=round(df/colmean,2)
   colnames(prop)=paste0(lab,seq(1,ncol(df)))
   return(prop)}
 
